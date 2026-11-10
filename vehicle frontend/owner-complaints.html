@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ParkEase | Owner Complaints</title>
+
+    <link rel="stylesheet" href="css/owner-complaints.css">
+</head>
+<body>
+
+<div class="dashboard">
+
+    <aside class="sidebar">
+
+        <h2 class="logo">Park<span>Ease</span></h2>
+
+        <p class="menu-title">OWNER MENU</p>
+
+        <a href="owner-dashboard.html">Dashboard</a>
+        <a href="my-parking.html">My Parking</a>
+        <a href="manage-slots.html">Manage Slots</a>
+        <a href="owner-payments.html">Payments</a>
+        <a href="owner-feedback.html">Feedback</a>
+        <a href="owner-complaints.html" class="active">Complaints</a>
+        <a href="owner-profile.html">My Profile</a>
+
+        <a href="login.html" class="logout">Logout</a>
+
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+
+            <div>
+                <h2>Complaint Management</h2>
+                <p>View and manage customer complaints</p>
+            </div>
+
+            <div class="profile">OWNER</div>
+
+        </header>
+
+        <section class="welcome">
+
+            <h1>Customer Complaints</h1>
+
+            <p>
+                Review customer issues and update their complaint status.
+            </p>
+
+        </section>
+
+        <section class="stats">
+
+            <div class="stat-card">
+                <h3>Total Complaints</h3>
+                <h2 id="totalComplaints">0</h2>
+            </div>
+
+            <div class="stat-card">
+                <h3>Open</h3>
+                <h2 id="openComplaints">0</h2>
+            </div>
+
+            <div class="stat-card">
+                <h3>In Progress</h3>
+                <h2 id="progressComplaints">0</h2>
+            </div>
+
+            <div class="stat-card">
+                <h3>Resolved</h3>
+                <h2 id="resolvedComplaints">0</h2>
+            </div>
+
+        </section>
+
+        <section class="complaints-section">
+
+            <div class="section-heading">
+                <div>
+                    <h2>All Customer Complaints</h2>
+                    <p>Complaints submitted by ParkEase customers</p>
+                </div>
+
+                <button onclick="loadComplaints()" class="refresh-btn">
+                    Refresh
+                </button>
+            </div>
+
+            <p id="message"></p>
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Customer</th>
+                            <th>Parking</th>
+                            <th>Booking ID</th>
+                            <th>Subject</th>
+                            <th>Description</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="complaintTable">
+
+                        <tr>
+                            <td colspan="9">Loading complaints...</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="js/owner-complaints.js"></script>
+
+</body>
+</html>

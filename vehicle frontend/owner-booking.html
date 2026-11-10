@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Bookings | ParkEase</title>
+    <link rel="stylesheet" href="css/owner-bookings.css">
+</head>
+<body>
+
+<div class="sidebar">
+    <h2>Park<span>Ease</span></h2>
+
+    <nav>
+        <a href="owner-dashboard.html">Dashboard</a>
+        <a href="my-parking.html">My Parking</a>
+        <a href="manage-slots.html">Manage Slots</a>
+        <a href="owner-payments.html">Payments</a>
+        <a href="owner-feedback.html">Feedback</a>
+        <a href="owner-complaints.html">Complaints</a>
+        <a href="owner-profile.html">My Profile</a>
+        <a href="login.html">Logout</a>
+    </nav>
+</div>
+
+<div class="main">
+
+    <header class="topbar">
+        <div>
+            <h2>Customer Bookings</h2>
+            <p>View and manage all parking reservations</p>
+        </div>
+
+        <div class="owner-info">
+            <div class="avatar">O</div>
+            <span>Parking Owner</span>
+        </div>
+    </header>
+
+    <section class="welcome">
+        <div>
+            <h2>Booking Management</h2>
+            <p>Track customer reservations and booking status.</p>
+        </div>
+    </section>
+
+    <!-- Statistics -->
+    <section class="stats">
+
+        <div class="stat-card">
+            <h3>Total Bookings</h3>
+            <h2 id="totalBookings">0</h2>
+        </div>
+
+        <div class="stat-card">
+            <h3>Pending</h3>
+            <h2 class="orange" id="pendingBookings">0</h2>
+        </div>
+
+        <div class="stat-card">
+            <h3>Confirmed</h3>
+            <h2 class="green" id="confirmedBookings">0</h2>
+        </div>
+
+        <div class="stat-card">
+            <h3>Cancelled</h3>
+            <h2 class="red" id="cancelledBookings">0</h2>
+        </div>
+
+    </section>
+
+    <!-- Filters -->
+    <section class="filter-section">
+
+        <input type="text" id="searchBooking"
+               placeholder="Search by booking ID, vehicle number...">
+
+        <select id="statusFilter">
+            <option value="ALL">All Status</option>
+            <option value="PENDING">Pending</option>
+            <option value="CONFIRMED">Confirmed</option>
+            <option value="CANCELLED">Cancelled</option>
+            <option value="COMPLETED">Completed</option>
+        </select>
+
+        <select id="parkingFilter">
+            <option value="ALL">All Parking Locations</option>
+        </select>
+
+    </section>
+
+    <!-- Booking Table -->
+    <section class="table-section">
+
+        <div class="section-heading">
+            <h3>All Customer Bookings</h3>
+            <span id="bookingCount">0 Bookings</span>
+        </div>
+
+        <div class="table-wrapper">
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Booking ID</th>
+                        <th>Customer</th>
+                        <th>Vehicle Number</th>
+                        <th>Parking Location</th>
+                        <th>Slot</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Amount</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+
+                <tbody id="bookingTableBody"></tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+</div>
+
+<script src="js/owner-bookings.js"></script>
+</body>
+</html>

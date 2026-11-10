@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | ParkEase</title>
+
+    <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body style="background-color:#F1F5FB;">
+
+<div class="login-container">
+
+    <!-- LEFT SIDE -->
+    <div class="login-info"
+         style="background:linear-gradient(135deg,#101D35,#174B83); color:white;">
+
+        <a href="index.html" class="logo" style="color:white;">
+            Park<span style="color:#42A5FF;">Ease</span>
+        </a>
+
+        <div>
+            <p class="tagline" style="color:#72B7FF;">
+                WELCOME BACK
+            </p>
+
+            <h1 style="color:white;">
+                Parking Made Simple.
+            </h1>
+
+            <p style="color:#E0EAF7;">
+                Login to your ParkEase account and manage
+                your parking bookings with ease.
+            </p>
+
+            <img
+                src="https://images.unsplash.com/photo-1506521781263-d8422e82f27a?w=900"
+                alt="Modern parking area"
+                style="width:100%; max-width:420px; border-radius:14px; margin-top:20px;">
+        </div>
+
+        <a href="index.html" class="back-link" style="color:#FFFFFF;">
+            ← Back to Home
+        </a>
+
+    </div>
+
+
+    <!-- RIGHT SIDE - LOGIN FORM -->
+    <div class="login-form-section"
+         style="background-color:#FFFFFF;">
+
+        <div class="login-form">
+
+            <h2 style="color:#142B50;">
+                Welcome Back!
+            </h2>
+
+            <p class="subtitle" style="color:#64748B;">
+                Login to continue to your account.
+            </p>
+
+            <!-- Only ONE form -->
+            <form id="loginForm"
+                  action="http://localhost:8081/vehicle_backend/Gateway"
+                  method="POST"
+                  onsubmit="return validateLogin()">
+
+                <input type="hidden" name="action" value="Login">
+
+                <!-- EMAIL -->
+                <label for="email">
+                    Email Address
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email"
+                    required>
+
+
+                <!-- PASSWORD -->
+                <label for="password">
+                    Password
+                </label>
+
+                <div class="password-box">
+
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Enter password"
+                        required>
+
+                    <button
+                        type="button"
+                        id="togglePassword"
+                        style="color:#1677D2;">
+                        Show
+                    </button>
+
+                </div>
+
+
+                <!-- LOGIN BUTTON -->
+                <button
+                    type="submit"
+                    class="login-btn"
+                    style="background-color:#1677D2; color:white;">
+                    Login
+                </button>
+
+                <p id="message"></p>
+
+            </form>
+
+            <p class="register-text">
+                Don't have an account?
+                <a href="register.html" style="color:#1677D2;">
+                    Create Account
+                </a>
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="js/login.js"></script>
+
+</body>
+</html>

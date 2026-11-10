@@ -1,0 +1,258 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Owner Dashboard | ParkEase</title>
+    <link rel="stylesheet" href="css/owner-dashboard.css">
+</head>
+<body>
+
+<div class="dashboard-container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <a href="index.html" class="logo">
+            Park<span>Ease</span>
+        </a>
+
+        <p class="menu-title">OWNER PANEL</p>
+
+        <nav>
+            <a href="owner-dashboard.html">
+            <i class="fa-solid fa-house"></i> Dashboard
+        </a>
+
+        <a href="my-parking.html">
+            <i class="fa-solid fa-square-parking"></i> My Parking
+        </a>
+
+        <a href="manage-slots.html">
+            <i class="fa-solid fa-border-all"></i> Manage Slot
+        </a>
+
+        <a href="owner-payments.html" class="active">
+            <i class="fa-solid fa-wallet"></i> Payments
+        </a>
+
+        <a href="owner-feedback.html">
+            <i class="fa-solid fa-star"></i> Feedback
+        </a>
+
+        <a href="owner-complaints.html">
+            <i class="fa-solid fa-headset"></i> Complaints
+        </a>
+
+        <a href="owner-profile.html">
+            <i class="fa-solid fa-user"></i> Profile
+        </a>
+        </nav>
+
+        <a href="login.html" class="logout">Logout</a>
+
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <!-- Topbar -->
+        <header class="topbar">
+
+            <div>
+                <h2>Owner Dashboard</h2>
+                <p>Manage your parking business efficiently.</p>
+            </div>
+
+            <<div class="profile-info">
+            <div class="profile-avatar" id="ownerInitial">O</div>
+
+             <div>
+                <h3 id="ownerName">Owner</h3>
+                <p>Owner Account</p>
+            </div>
+        </div>
+
+        </header>
+
+        <!-- Welcome Section -->
+        <section class="welcome-section">
+             <form id="ownerboard"
+                  action="http://localhost:8081/vehicle_backend/Gateway"
+                  method="POST"
+                  >
+
+                <input type="hidden" name="action" value="OwnerBoard">
+                </form>
+            <div class="welcome-content">
+                <p class="welcome-tag">OWNER CONTROL PANEL</p>
+
+                <h1>Welcome to ParkEase!</h1>
+
+                <p>
+                    Manage your parking locations, monitor slot availability
+                    and grow your parking business.
+                </p>
+
+                <a href="my-parking.html" class="add-parking-btn">
+                    + Add Parking Location
+                </a>
+            </div>
+
+            <img
+                src="https://images.unsplash.com/photo-1590674899484-d5640e854abe?w=900"
+                alt="Parking facility">
+        </section>
+
+        <!-- Statistics -->
+        <section class="stats-section">
+
+            <div class="stat-card">
+                <div class="stat-icon blue">P</div>
+                <div>
+                    <p>Total Parking Areas</p>
+                    <h2 id="totalParking">3</h2>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon green">A</div>
+                <div>
+                    <p>Available Slots</p>
+                    <h3 id="overviewAvailable">0</h3>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon red">B</div>
+                <div>
+                    <p>Booked Slots</p>
+                    <h3 id="overviewBooked">0</h3>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon purple">R</div>
+                <div>
+                    <p>Total Earnings</p>
+                    <h2 id="totalEarnings">₹12,500</h2>
+                </div>
+            </div>
+        
+        </section>
+
+        <!-- Quick Actions -->
+        <section class="quick-section">
+
+            <h2>Quick Management</h2>
+
+            <div class="quick-cards">
+
+                <a href="my-parking.html" class="quick-card">
+                    <div class="quick-icon">+</div>
+                    <h3>Add Parking Area</h3>
+                    <p>Register a new parking location.</p>
+                    <span>Get Started →</span>
+                </a>
+
+                <a href="manage-slots.html" class="quick-card">
+                    <div class="quick-icon">S</div>
+                    <h3>Manage Slots</h3>
+                    <p>Add, update and monitor parking slots.</p>
+                    <span>Manage →</span>
+                </a>
+
+                <a href="owner-bookings.html" class="quick-card">
+                    <div class="quick-icon">B</div>
+                    <h3>View Bookings</h3>
+                    <p>Check customer parking reservations.</p>
+                    <span>View Bookings →</span>
+                </a>
+
+            </div>
+
+        </section>
+
+        <!-- Parking Slot Overview -->
+        <section class="parking-section">
+
+            <h2>Parking Slot Overview</h2>
+
+            <div class="slot-summary">
+
+                <div class="slot-box">
+                    <span class="slot-color available"></span>
+                    <div>
+                        <h3>45</h3>
+                        <p>Available</p>
+                    </div>
+                </div>
+
+                <div class="slot-box">
+                    <span class="slot-color booked"></span>
+                    <div>
+                        <h3>25</h3>
+                        <p>Booked</p>
+                    </div>
+                </div>
+
+                <div class="slot-box">
+                    <span class="slot-color maintenance"></span>
+                    <div>
+                        <h3>5</h3>
+                        <p>Maintenance</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Recent Bookings -->
+        <section class="recent-section">
+
+            <div class="section-heading">
+                <h2>Recent Customer Bookings</h2>
+                <a href="owner-bookings.html">View All</a>
+            </div>
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Booking ID</th>
+                            <th>Customer</th>
+                            <th>Vehicle</th>
+                            <th>Parking Area</th>
+                            <th>Amount</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="bookingTable">
+    <tr>
+        <td colspan="6">Loading recent bookings...</td>
+    </tr>
+</tbody>
+                </table>
+
+            </div>
+
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            © 2026 ParkEase. All Rights Reserved.
+        </footer>
+
+    </main>
+
+</div>
+
+<script src="js/owner-dashboard.js"></script>
+
+</body>
+</html>

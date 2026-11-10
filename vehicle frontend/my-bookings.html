@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ParkEase | My Bookings</title>
+    <link rel="stylesheet" href="css/my-bookings.css">
+</head>
+<body>
+
+<div class="dashboard">
+
+    <aside class="sidebar">
+        <h2 class="logo">Park<span>Ease</span></h2>
+        <p class="menu-title">MAIN MENU</p>
+
+        <a href="user-dashboard.html">Dashboard</a>
+        <a href="findparking.html">Find Parking</a>
+        <a href="parkingslots.html">Parking Slots</a>
+    
+        <a href="payment.html">Payment</a>
+        <a href="feedback.html">Feedback</a>
+        <a href="complaint.html">Complaints</a>
+
+        <a href="login.html" class="logout">Logout</a>
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <h2>My Bookings</h2>
+                <p>View and manage your parking bookings</p>
+            </div>
+            <div class="profile">User</div>
+        </header>
+
+        <section class="booking-summary">
+
+            <div class="summary-card">
+                <span>Total Bookings</span>
+                <h2 id="totalBookings">0</h2>
+            </div>
+
+            <div class="summary-card">
+                <span>Pending Bookings</span>
+                <h2 id="pendingBookings">0</h2>
+            </div>
+
+            <div class="summary-card">
+                <span>Cancelled Bookings</span>
+                <h2 id="cancelledBookings">0</h2>
+            </div>
+
+        </section>
+
+        <section class="booking-section">
+
+            <div class="section-heading">
+                <div>
+                    <h2>Booking History</h2>
+                    <p>Your recent parking reservations</p>
+                </div>
+
+                <a href="findparking.html" class="new-booking-btn">
+                    + New Booking
+                </a>
+            </div>
+
+            <div class="table-container">
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Booking ID</th>
+                            <th>Parking Location</th>
+                            <th>Slot</th>
+                            <th>Vehicle</th>
+                            <th>Date</th>
+                            <th>Time</th>
+                            <th>Amount</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="bookingTableBody">
+                        <tr>
+                            <td colspan="9" class="empty-message">
+                                No bookings available.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+
+        </section>
+
+        <div id="cancelMessage" class="cancel-message"></div>
+
+    </main>
+</div>
+
+<script src="js/my-bookings.js"></script>
+</body>
+</html>

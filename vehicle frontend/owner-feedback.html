@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ParkEase | Customer Feedback</title>
+    <link rel="stylesheet" href="css/owner-feedback.css">
+</head>
+<body>
+
+<div class="dashboard">
+
+    <aside class="sidebar">
+        <h2 class="logo">Park<span>Ease</span></h2>
+
+        <p class="menu-title">OWNER MENU</p>
+
+        <nav>
+            <a href="owner-dashboard.html">Dashboard</a>
+            <a href="my-parking.html">My Parking</a>
+            <a href="manage-slots.html">Manage Slots</a>
+            
+            <a href="owner-payments.html">Payments</a>
+            <a href="owner-feedback.html" class="active">Feedback</a>
+            <a href="owner-complaints.html">Complaints</a>
+            <a href="owner-profile.html">Profile</a>
+        </nav>
+
+        <a href="login.html" class="logout">Logout</a>
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <h1>Customer Feedback</h1>
+                <p>View reviews and ratings from your parking customers.</p>
+            </div>
+
+            <div class="owner-label">OWNER PANEL</div>
+        </header>
+
+        <section class="stats">
+
+            <div class="stat-card">
+                <div class="stat-icon">💬</div>
+                <p>Total Feedback</p>
+                <h2 id="totalFeedback">0</h2>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">⭐</div>
+                <p>Average Rating</p>
+                <h2 id="averageRating">0.0</h2>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">🌟</div>
+                <p>5 Star Reviews</p>
+                <h2 id="fiveStar">0</h2>
+            </div>
+
+        </section>
+
+        <section class="feedback-section">
+
+            <div class="section-heading">
+                <div>
+                    <h2>All Customer Reviews</h2>
+                    <p>Feedback received for your parking locations</p>
+                </div>
+
+                <button id="refreshBtn" type="button">Refresh</button>
+            </div>
+
+            <div id="message" class="message">Loading feedback...</div>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Customer</th>
+                            <th>Parking Location</th>
+                            <th>Rating</th>
+                            <th>Comments</th>
+                            <th>Date</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="feedbackTable">
+                        <tr>
+                            <td colspan="6">Loading feedback...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="js/owner-feedback.js"></script>
+</body>
+</html>

@@ -1,0 +1,206 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ParkEase | Complaints</title>
+    <link rel="stylesheet" href="css/complaint.css">
+</head>
+<body>
+
+<div class="dashboard">
+
+    <aside class="sidebar">
+        <h2 class="logo">Park<span>Ease</span></h2>
+
+        <p class="menu-title">MAIN MENU</p>
+
+        <a href="user-dashboard.html">Dashboard</a>
+        <a href="findparking.html">Find Parking</a>
+        <a href="parkingslots.html">Parking Slots</a>
+        <a href="payment.html">Payment</a>
+        <a href="feedback.html">Feedback</a>
+        <a href="complaint.html" class="active">Complaints</a>
+        <a href="profile.html">My Profile</a>
+
+        <a href="login.html" class="logout">Logout</a>
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <h2>Complaint Management</h2>
+                <p>Submit and track your complaints</p>
+            </div>
+            <div class="profile">User</div>
+        </header>
+
+        <section class="complaint-layout">
+
+            <!-- Complaint form -->
+
+            <div class="complaint-card">
+
+                <div class="heading">
+                    <div class="heading-icon">!</div>
+                    <h2>Submit a Complaint</h2>
+                    <p>Tell us about the issue you are facing.</p>
+                </div>
+
+                
+<form id="complaintForm">
+
+    <input type="hidden" name="action" value="Complaint">
+    <input type="hidden" name="complaintAction" value="add">
+
+    <div class="form-group">
+        <label for="subject">Complaint Subject</label>
+
+        <select id="subject" name="subject" required>
+            <option value="">Select Complaint Subject</option>
+            <option value="Parking Issue">Parking Issue</option>
+            <option value="Booking Issue">Booking Issue</option>
+            <option value="Payment Issue">Payment Issue</option>
+            <option value="Slot Availability">Slot Availability</option>
+            <option value="Vehicle Issue">Vehicle Issue</option>
+            <option value="Other">Other</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="bookingId">Booking ID</label>
+        <input type="number" id="bookingId" name="bookingId"
+               placeholder="Enter booking ID (optional)">
+    </div>
+
+    <div class="form-group">
+        <label for="description">Complaint Description</label>
+
+        <textarea
+            id="description"
+            name="description"
+            rows="6"
+            maxlength="2000"
+            placeholder="Explain your problem clearly..."
+            required></textarea>
+
+        <small>Maximum 2000 characters.</small>
+    </div>
+
+    <button type="submit" class="submit-btn">
+        Submit Complaint
+    </button>
+
+    <p id="complaintMessage" class="message"></p>
+
+</form>
+
+            </div>
+
+            <!-- Information panel -->
+
+            <div class="complaint-info">
+
+                <h2>Need Help?</h2>
+
+                <p>
+                    We are here to help you resolve your parking-related
+                    problems. Submit a complaint with the correct details.
+                </p>
+
+                <div class="info-item">
+                    <span>01</span>
+                    <div>
+                        <strong>Submit Complaint</strong>
+                        <p>Describe the issue you experienced.</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <span>02</span>
+                    <div>
+                        <strong>Complaint Review</strong>
+                        <p>The complaint can be reviewed by the admin.</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <span>03</span>
+                    <div>
+                        <strong>Resolution</strong>
+                        <p>Track the status until the issue is resolved.</p>
+                    </div>
+                </div>
+
+                <div class="status-guide">
+                    <h3>Complaint Status</h3>
+
+                    <p><span class="status open">OPEN</span> Newly submitted</p>
+                    <p><span class="status progress">IN PROGRESS</span> Under review</p>
+                    <p><span class="status resolved">RESOLVED</span> Issue resolved</p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Complaint history
+
+        <section class="history-section">
+
+            <div class="history-heading">
+                <div>
+                    <h2>My Complaints</h2>
+                    <p>View your submitted complaints</p>
+                </div>
+
+                <span id="complaintCount">0 Complaints</span>
+            </div>
+
+            <div class="table-container">
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Complaint ID</th>
+                            <th>Subject</th>
+                            <th>Booking ID</th>
+                            <th>Description</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="complaintTableBody">
+                        <tr>
+                            <td colspan="6" class="empty-message">
+                                No complaints submitted yet.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+
+        </section>-->
+
+        <!-- Success message -->
+
+        <section class="success-section" id="successSection">
+            <div class="success-icon">✓</div>
+            <h2>Complaint Submitted!</h2>
+            <p id="successDetails">
+                Your demo complaint has been recorded.
+            </p>
+            <button onclick="closeSuccess()">Continue</button>
+        </section>
+
+    </main>
+
+</div>
+
+<script src="js/complaint.js"></script>
+</body>
+</html>

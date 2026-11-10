@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" version="4.0">
+  <display-name>vehicle_backend</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>index.xhtml</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+    <welcome-file>default.xhtml</welcome-file>
+  </welcome-file-list>
+   <servlet>
+        <servlet-name>Gateway</servlet-name>
+        <servlet-class>com.Gateway</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Gateway</servlet-name>
+        <url-pattern>/Gateway</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>LoginControllerr</servlet-name>
+        <servlet-class>com.LoginControllerr</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginControllerr</servlet-name>
+        <url-pattern>/LoginControllerr</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>RegisterControllerr</servlet-name>
+        <servlet-class>com.RegisterControllerr</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RegisterControllerr</servlet-name>
+        <url-pattern>/RegisterControllerr</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>BookingControllerr</servlet-name>
+        <servlet-class>com.BookingControllerr</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>BookingControllerr</servlet-name>
+        <url-pattern>/BookingControllerr</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>CancelBookingControllerr</servlet-name>
+        <servlet-class>com.CancelBookingControllerr</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CancelBookingControllerr</servlet-name>
+        <url-pattern>/CancelBookingControllerr</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>LogoutControllerr</servlet-name>
+        <servlet-class>com.LogoutControllerr</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LogoutControllerr</servlet-name>
+        <url-pattern>/LogoutControllerr</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ParkingControllerr</servlet-name>
+        <servlet-class>com.ParkingControllerr</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ParkingControllerr</servlet-name>
+        <url-pattern>/ParkingControllerr</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>PaymentControllerr</servlet-name>
+        <servlet-class>com.PaymentControllerr</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PaymentControllerr</servlet-name>
+        <url-pattern>/PaymentControllerr</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SearchParkingControllerr</servlet-name>
+        <servlet-class>com.SearchParkingControllerr</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SearchParkingControllerr</servlet-name>
+        <url-pattern>/SearchParkingControllerr</url-pattern>
+    </servlet-mapping>
+	<servlet>
+    <servlet-name>SlotControllerr</servlet-name>
+    <servlet-class>com.SlotControllerr</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>SlotControllerr</servlet-name>
+    <url-pattern>/SlotControllerr</url-pattern>
+</servlet-mapping>
+    <servlet>
+        <servlet-name>VehicleControllerr</servlet-name>
+        <servlet-class>com.VehicleControllerr</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>VehicleControllerr</servlet-name>
+        <url-pattern>/VehicleControllerr</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>FeedbackControllerr</servlet-name>
+        <servlet-class>com.FeedbackControllerr</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FeedbackControllerr</servlet-name>
+        <url-pattern>/FeedbackControllerr</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ComplaintControllerr</servlet-name>
+        <servlet-class>com.ComplaintControllerr</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ComplaintControllerr</servlet-name>
+        <url-pattern>/ComplaintControllerr</url-pattern>
+    </servlet-mapping>
+    
+<servlet>
+    <servlet-name>DashboardControllerr</servlet-name>
+    <servlet-class>com.DashboardControllerr</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>DashboardControllerr</servlet-name>
+    <url-pattern>/DashboardControllerr</url-pattern>
+</servlet-mapping>
+    
+<servlet>
+    <servlet-name>OwnerDashboardController</servlet-name>
+    <servlet-class>com.OwnerDashboardController</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>OwnerDashboardController</servlet-name>
+    <url-pattern>/OwnerDashboardController</url-pattern>
+</servlet-mapping>
+<servlet>
+    <servlet-name>OwnerComplaintController</servlet-name>
+    <servlet-class>com.OwnerComplaintController</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>OwnerComplaintController</servlet-name>
+    <url-pattern>/OwnerComplaintController</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>OwnerFeedbackController</servlet-name>
+    <servlet-class>com.OwnerFeedbackController</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>OwnerFeedbackController</servlet-name>
+    <url-pattern>/OwnerFeedbackController</url-pattern>
+</servlet-mapping>
+    <servlet>
+    <servlet-name>OwnerProfileController</servlet-name>
+    <servlet-class>com.OwnerProfileController</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>OwnerProfileController</servlet-name>
+    <url-pattern>/OwnerProfileController</url-pattern>
+</servlet-mapping>
+ 
+     <servlet>
+    <servlet-name>UserProfileController</servlet-name>
+    <servlet-class>com.UserProfileController</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>UserProfileController</servlet-name>
+    <url-pattern>/UserProfileController</url-pattern>
+</servlet-mapping>
+</web-app>

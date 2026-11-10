@@ -1,0 +1,266 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #f4f7fb;
+    color: #1e293b;
+}
+
+/* Navbar */
+
+.navbar {
+    width: 100%;
+    height: 75px;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8%;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: bold;
+    color: #1e3a8a;
+    text-decoration: none;
+}
+
+.logo span {
+    color: #2563eb;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 30px;
+}
+
+.navbar nav a {
+    text-decoration: none;
+    color: #475569;
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.navbar nav a:hover {
+    color: #2563eb;
+}
+
+/* Main Container */
+
+.container {
+    width: 85%;
+    max-width: 1150px;
+    margin: 45px auto;
+}
+
+/* Heading */
+
+.heading {
+    margin-bottom: 30px;
+}
+
+.tagline {
+    color: #2563eb;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.heading h1 {
+    font-size: 32px;
+    color: #172554;
+    margin-bottom: 10px;
+}
+
+.heading p:last-child {
+    color: #64748b;
+    font-size: 15px;
+}
+
+/* Details Layout */
+
+.details-layout {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 30px;
+    align-items: stretch;
+}
+
+/* Parking Visual */
+
+.parking-visual {
+    background: linear-gradient(135deg, #1e40af, #2563eb);
+    border-radius: 18px;
+    padding: 45px 25px;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.parking-symbol {
+    width: 110px;
+    height: 110px;
+    background: white;
+    color: #2563eb;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 75px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.parking-visual h2 {
+    font-size: 25px;
+    margin-bottom: 12px;
+}
+
+.parking-visual p {
+    color: #dbeafe;
+    margin-bottom: 15px;
+}
+
+.available {
+    background: #dcfce7;
+    color: #166534;
+    padding: 9px 18px;
+    border-radius: 25px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* Details Card */
+
+.details-card {
+    background: white;
+    border-radius: 18px;
+    padding: 30px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.06);
+}
+
+.details-card h2 {
+    color: #172554;
+    font-size: 22px;
+    margin-bottom: 25px;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 17px 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.detail-row span {
+    color: #64748b;
+    font-size: 14px;
+}
+
+.detail-row strong {
+    color: #1e293b;
+    font-size: 14px;
+    text-align: right;
+}
+
+.detail-row .price {
+    color: #2563eb;
+    font-size: 17px;
+}
+
+/* Book Button */
+
+.book-btn {
+    width: 100%;
+    margin-top: 28px;
+    padding: 15px;
+    border: none;
+    border-radius: 9px;
+    background: #2563eb;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.book-btn:hover {
+    background: #1e40af;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(37,99,235,0.25);
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+    padding: 22px;
+    color: #64748b;
+    font-size: 13px;
+    margin-top: 40px;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        height: auto;
+        padding: 20px 5%;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .navbar nav {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .container {
+        width: 92%;
+        margin: 30px auto;
+    }
+
+    .details-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .parking-visual {
+        min-height: 280px;
+    }
+
+    .heading h1 {
+        font-size: 26px;
+    }
+
+    .details-card {
+        padding: 22px;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .detail-row {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .detail-row strong {
+        text-align: left;
+    }
+}

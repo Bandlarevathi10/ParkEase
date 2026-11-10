@@ -1,0 +1,64 @@
+ 
+<%@ page import="java.util.List" %>
+<%@ page import="com.model.data.ParkingData" %>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>View Parking - ParkEase</title>
+    <link rel="stylesheet" href="css/parking.css">
+</head>
+<body>
+
+<header class="header">
+    <h2>ParkEase</h2>
+    <nav>
+        <a href="parking.html">Home</a>
+        <a href="add-parking.html">Add Parking</a>
+    </nav>
+</header>
+
+<div class="table-container">
+    <h1>Parking Locations</h1>
+
+    <table>
+        <tr>
+            <th>Parking ID</th>
+            <th>Parking Name</th>
+            <th>Location</th>
+            <th>Address</th>
+            <th>Total Slots</th>
+            <th>Price Per Hour</th>
+        </tr>
+
+        <%
+            List<ParkingData> parkingList =
+                (List<ParkingData>) request.getAttribute("parkingList");
+
+            if (parkingList != null && !parkingList.isEmpty()) {
+                for (ParkingData p : parkingList) {
+        %>
+        <tr>
+            <td><%= p.getParkingId() %></td>
+            <td><%= p.getParkingName() %></td>
+            <td><%= p.getLocation() %></td>
+            <td><%= p.getAddress() %></td>
+            <td><%= p.getTotalSlots() %></td>
+            <td>₹<%= p.getPricePerHour() %></td>
+        </tr>
+        <%
+                }
+            } else {
+        %>
+        <tr>
+            <td colspan="6">No parking locations found.</td>
+        </tr>
+        <% } %>
+    </table>
+
+    <a href="parking.html" class="back-btn">Back to Dashboard</a>
+</div>
+
+</body>
+</html>

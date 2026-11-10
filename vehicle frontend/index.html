@@ -1,0 +1,454 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ParkEase - Find and book parking spaces easily.">
+    <title>ParkEase | Smart Parking Management</title>
+
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- NAVIGATION BAR -->
+    <header class="navbar">
+        <div class="container nav-container">
+
+            <a href="index.html" class="logo">
+                <span class="logo-icon">P</span>
+                <span>Park<span class="logo-blue">Ease</span></span>
+            </a>
+
+            <button class="menu-toggle" id="menuToggle"
+                    aria-label="Open navigation" aria-expanded="false">
+    
+            </button>
+
+            <nav class="nav-links" id="navLinks">
+                <a href="#home" class="active">Home</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#how-it-works">How It Works</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <div class="nav-buttons">
+                <a href="login.html" class="btn btn-login">Login</a>
+                <a href="register.html" class="btn btn-primary">Register</a>
+            </div>
+
+        </div>
+    </header>
+
+
+    <!-- HOME / HERO SECTION -->
+    <main>
+
+        <section class="hero" id="home">
+            <div class="container hero-container">
+
+                <div class="hero-content">
+                    <span class="eyebrow">
+                        SMART PARKING MANAGEMENT SYSTEM
+                    </span>
+
+                    <h1>
+                        Parking Made
+                        <span>Easy & Smart.</span>
+                    </h1>
+
+                    <p>
+                        Find available parking spaces, reserve your slot
+                        online and enjoy a hassle-free parking experience
+                        with ParkEase.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="register.html" class="btn btn-primary btn-large">
+                            Get Started <span>→</span>
+                        </a>
+
+                        <a href="#how-it-works" class="btn btn-outline btn-large">
+                            Explore More
+                        </a>
+                    </div>
+
+                    <div class="hero-note">
+                        <span class="note-check">✓</span>
+                        Easy booking · Cars and Bikes · Online reservations
+                    </div>
+                </div>
+
+
+                <!-- PARKING VISUAL -->
+                <div class="hero-visual">
+
+                    <div class="visual-top">
+                        <div>
+                            <span class="visual-label">PARKING OVERVIEW</span>
+                            <h3>Find Your Parking</h3>
+                        </div>
+                        <span class="live-status">
+                            <span class="live-dot"></span> Live concept
+                        </span>
+                    </div>
+
+                    <div class="parking-board">
+
+                        <div class="parking-row">
+                            <div class="parking-slot available">
+                                <span>P01</span>
+                                <span class="car-symbol">🚗</span>
+                                <small>Available</small>
+                            </div>
+
+                            <div class="parking-slot booked">
+                                <span>P02</span>
+                                <span class="car-symbol">🚙</span>
+                                <small>Booked</small>
+                            </div>
+
+                            <div class="parking-slot available">
+                                <span>P03</span>
+                                <span class="car-symbol">🚗</span>
+                                <small>Available</small>
+                            </div>
+                        </div>
+
+                        <div class="parking-road">
+                            <span>DRIVING LANE</span>
+                        </div>
+
+                        <div class="parking-row">
+                            <div class="parking-slot booked">
+                                <span>P04</span>
+                                <span class="car-symbol">🚙</span>
+                                <small>Booked</small>
+                            </div>
+
+                            <div class="parking-slot available">
+                                <span>P05</span>
+                                <span class="car-symbol">🚗</span>
+                                <small>Available</small>
+                            </div>
+
+                            <div class="parking-slot selected">
+                                <span>P06</span>
+                                <span class="car-symbol">🚗</span>
+                                <small>Selected</small>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="slot-legend">
+                        <span><i class="legend-dot green"></i> Available</span>
+                        <span><i class="legend-dot red"></i> Booked</span>
+                        <span><i class="legend-dot blue"></i> Selected</span>
+                    </div>
+
+                    <div class="visual-footer">
+                        <div>
+                            <strong>ParkEase</strong>
+                            <small>Your parking, simplified.</small>
+                        </div>
+                        <span class="footer-icon">P</span>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- FEATURES SUMMARY -->
+        <section class="stats-section">
+            <div class="container stats-grid">
+
+                <div class="stat-item">
+                    <span class="stat-icon">🚗</span>
+                    <div>
+                        <h3>Car Parking</h3>
+                        <p>Dedicated car spaces</p>
+                    </div>
+                </div>
+
+                <div class="stat-item">
+                    <span class="stat-icon">🏍️</span>
+                    <div>
+                        <h3>Bike Parking</h3>
+                        <p>Dedicated bike spaces</p>
+                    </div>
+                </div>
+
+                <div class="stat-item">
+                    <span class="stat-icon">📅</span>
+                    <div>
+                        <h3>Online Booking</h3>
+                        <p>Reserve in advance</p>
+                    </div>
+                </div>
+
+                <div class="stat-item">
+                    <span class="stat-icon">🔒</span>
+                    <div>
+                        <h3>Secure Access</h3>
+                        <p>Personalized account</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ABOUT SECTION -->
+        <section class="section about-section" id="about">
+            <div class="container about-grid">
+
+                <div class="about-image">
+                    <div class="about-image-card">
+                        <span class="about-big-icon">🅿️</span>
+                        <h3>Smarter Parking Starts Here</h3>
+                        <p>Search. Select. Reserve.</p>
+                    </div>
+                    <div class="floating-card">
+                        <span>✓</span>
+                        Simple online reservations
+                    </div>
+                </div>
+
+                <div class="about-content">
+                    <span class="section-tag">ABOUT PARKEASE</span>
+                    <h2>A Better Way to Find Your Parking Space</h2>
+
+                    <p>
+                        ParkEase is a web-based parking management platform
+                        designed to make parking convenient and organized.
+                        Users can search for parking locations, check
+                        available slots and reserve spaces online.
+                    </p>
+
+                    <p>
+                        Whether you travel by car or bike, ParkEase helps
+                        you manage your parking reservations through one
+                        simple platform.
+                    </p>
+
+                    <a href="register.html" class="btn btn-primary">
+                        Join ParkEase →
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- SERVICES SECTION -->
+        <section class="section services-section" id="services">
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="section-tag">OUR SERVICES</span>
+                    <h2>Everything You Need for Easy Parking</h2>
+                    <p>Simple tools to make your parking experience better.</p>
+                </div>
+
+                <div class="service-grid">
+
+                    <article class="service-card">
+                        <div class="service-icon">📍</div>
+                        <h3>Find Parking</h3>
+                        <p>Search parking locations and explore available spaces.</p>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-icon">🅿️</div>
+                        <h3>Choose Your Slot</h3>
+                        <p>View car and bike parking slots and select your preferred space.</p>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-icon">📱</div>
+                        <h3>Online Booking</h3>
+                        <p>Reserve your parking space for your preferred date and time.</p>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-icon">💳</div>
+                        <h3>Easy Payments</h3>
+                        <p>View your payment details and booking transactions.</p>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-icon">🚘</div>
+                        <h3>Manage Vehicles</h3>
+                        <p>Add and manage your registered cars and bikes.</p>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-icon">📋</div>
+                        <h3>Booking History</h3>
+                        <p>Track your reservations and view previous bookings.</p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- HOW IT WORKS -->
+        <section class="section how-section" id="how-it-works">
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="section-tag">HOW IT WORKS</span>
+                    <h2>Book Your Parking in 4 Simple Steps</h2>
+                    <p>Getting a parking space has never been easier.</p>
+                </div>
+
+                <div class="steps-grid">
+
+                    <div class="step-card">
+                        <div class="step-number">01</div>
+                        <div class="step-icon">👤</div>
+                        <h3>Create Account</h3>
+                        <p>Register and create your personal ParkEase account.</p>
+                    </div>
+
+                    <div class="step-card">
+                        <div class="step-number">02</div>
+                        <div class="step-icon">🔍</div>
+                        <h3>Search Parking</h3>
+                        <p>Choose a location, vehicle type and booking time.</p>
+                    </div>
+
+                    <div class="step-card">
+                        <div class="step-number">03</div>
+                        <div class="step-icon">🅿️</div>
+                        <h3>Select a Slot</h3>
+                        <p>Check availability and select your preferred slot.</p>
+                    </div>
+
+                    <div class="step-card">
+                        <div class="step-number">04</div>
+                        <div class="step-icon">✅</div>
+                        <h3>Confirm Booking</h3>
+                        <p>Complete the booking and view your confirmation.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- CALL TO ACTION -->
+        <section class="cta-section">
+            <div class="container cta-content">
+                <div>
+                    <span class="cta-tag">START YOUR JOURNEY</span>
+                    <h2>Ready for a Hassle-Free Parking Experience?</h2>
+                    <p>Create your account and explore ParkEase.</p>
+                </div>
+
+                <a href="register.html" class="btn btn-white btn-large">
+                    Register Now →
+                </a>
+            </div>
+        </section>
+
+
+        <!-- CONTACT SECTION -->
+        <section class="section contact-section" id="contact">
+            <div class="container contact-grid">
+
+                <div>
+                    <span class="section-tag">CONTACT US</span>
+                    <h2>We Are Here to Help</h2>
+                    <p>
+                        Have questions or need assistance? Send us a message
+                        using the form.
+                    </p>
+
+                    <div class="contact-detail">
+                        <span>✉️</span>
+                        <div>
+                            <strong>Email</strong>
+                            <p>support@parkease.com</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-detail">
+                        <span>📍</span>
+                        <div>
+                            <strong>Service</strong>
+                            <p>Smart parking management platform</p>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contactForm">
+                    <h3>Send Us a Message</h3>
+
+                    <label for="contactName">Full Name</label>
+                    <input type="text" id="contactName"
+                           placeholder="Enter your name" required>
+
+                    <label for="contactEmail">Email Address</label>
+                    <input type="email" id="contactEmail"
+                           placeholder="Enter your email" required>
+
+                    <label for="contactMessage">Message</label>
+                    <textarea id="contactMessage"
+                              placeholder="Write your message..."
+                              rows="4" required></textarea>
+
+                    <button type="submit" class="btn btn-primary">
+                        Send Message →
+                    </button>
+
+                    <p id="contactStatus" class="form-status"
+                       aria-live="polite"></p>
+                </form>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-container">
+
+            <div>
+                <a href="index.html" class="logo footer-logo">
+                    <span class="logo-icon">P</span>
+                    <span>Park<span class="logo-blue">Ease</span></span>
+                </a>
+
+                <p>Smart parking. Simple booking. Better journeys.</p>
+            </div>
+
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+        </div>
+
+        <div class="container copyright">
+            <p>© <span id="currentYear"></span> ParkEase. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+    <script src="js/index.js"></script>
+</body>
+</html>

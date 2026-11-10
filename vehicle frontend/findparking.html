@@ -1,0 +1,361 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Parking | ParkEase</title>
+    <link rel="stylesheet" href="css/findparking.css">
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="logo">
+            <span class="logo-icon">P</span>
+            <h2>ParkEase</h2>
+        </div>
+
+        <p class="menu-title">CUSTOMER MENU</p>
+
+        <nav>
+            <a href="user-dashboard.html">Dashboard</a>
+            <a href="findparking.html" class="active">Find Parking</a>
+            <a href="parkingslots.html">Parking Slots</a>
+            <a href="payment.html">Payments</a>
+            <a href="feedback.html">Feedback</a>
+            <a href="complaint.html">Complaints</a>
+            <a href="profile.html">My Profile</a>
+        </nav>
+
+        <a href="login.html" class="logout">Logout</a>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <h2>Find Parking</h2>
+                <p>Search and book your perfect parking space</p>
+            </div>
+
+            <div class="profile">
+                <div class="profile-circle">R</div>
+                <div>
+                    <strong>Revathi</strong>
+                    <small>Customer</small>
+                </div>
+            </div>
+        </header>
+
+        <!-- Banner -->
+        <section class="banner">
+            <div class="banner-text">
+                <h1>Find Your Perfect Parking Space</h1>
+                <p>Search nearby parking locations and reserve your slot easily.</p>
+            </div>
+        </section>
+
+        <!-- Search Section -->
+        <section class="search-section">
+
+            <h2>Search Parking Locations</h2>
+
+            <div class="search-form">
+
+                <div class="form-group">
+                    <label for="city">City</label>
+                    <input type="text" id="city"
+                           placeholder="Enter city name">
+                </div>
+
+                <div class="form-group">
+                    <label for="location">Location</label>
+                    <input type="text" id="location"
+                           placeholder="Enter area or location">
+                </div>
+
+                <div class="form-group">
+                    <label for="vehicleType">Vehicle Type</label>
+                    <select id="vehicleType">
+                        <option value="">Select Vehicle</option>
+                        <option value="CAR">Car</option>
+                        <option value="BIKE">Bike</option>
+                    </select>
+                </div>
+
+                <button type="button" id="searchBtn">Search Parking</button>
+
+            </div>
+
+        </section>
+
+        <!-- Results -->
+        <section class="results-section">
+
+            <div class="section-heading">
+                <div>
+                    <h2>Available Parking Locations</h2>
+                    <p>Explore parking spaces near your destination.</p>
+                </div>
+
+                <span id="resultCount">0 Locations</span>
+            </div>
+
+            <div id="parkingResults" class="parking-grid">
+
+                <!-- Sample parking card 1 -->
+                <div class="parking-card"
+                     data-city="guntur"
+                     data-location="brodipet"
+                     data-vehicle="CAR,BIKE">
+
+                    <div class="parking-image image-one">
+                        <span class="available-tag">Available</span>
+                    </div>
+
+                    <div class="parking-details">
+                        <h3>City Center Parking</h3>
+                        <p>📍 Brodipet, Guntur</p>
+
+                        <div class="parking-info">
+                            <span>🚗 Car & Bike</span>
+                            <span>45 Slots Available</span>
+                        </div>
+
+                        <div class="price-row">
+                            <div>
+                                <small>Starting from</small>
+                                <h3>₹30 <small>/ hour</small></h3>
+                            </div>
+
+                            <button type="button"
+                                    class="book-btn"
+                                    onclick="bookParking(1)">
+                                Book Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sample parking card 2 -->
+                <div class="parking-card"
+                     data-city="guntur"
+                     data-location="lakshmipuram"
+                     data-vehicle="CAR">
+
+                    <div class="parking-image image-two">
+                        <span class="available-tag">Available</span>
+                    </div>
+
+                    <div class="parking-details">
+                        <h3>Green Park Parking</h3>
+                        <p>📍 Lakshmipuram, Guntur</p>
+
+                        <div class="parking-info">
+                            <span>🚗 Car</span>
+                            <span>20 Slots Available</span>
+                        </div>
+
+                        <div class="price-row">
+                            <div>
+                                <small>Starting from</small>
+                                <h3>₹40 <small>/ hour</small></h3>
+                            </div>
+
+                            <button type="button"
+                                    class="book-btn"
+                                    onclick="bookParking(2)">
+                                Book Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+<!-- Parking Card 4 -->
+<div class="parking-card"
+     data-city="guntur"
+     data-location="arundelpet"
+     data-vehicle="CAR,BIKE">
+
+    <div class="parking-image image-four">
+        <span class="available-tag">Available</span>
+    </div>
+
+    <div class="parking-details">
+        <h3>Royal Parking Plaza</h3>
+        <p>📍 Arundelpet, Guntur</p>
+        <div class="parking-info">
+            <span>🚗 Car & Bike</span>
+            <span>30 Slots Available</span>
+        </div>
+        <div class="price-row">
+            <div>
+                <small>Starting from</small>
+                <h3>₹35 <small>/ hour</small></h3>
+            </div>
+            <button class="book-btn" onclick="bookParking(4)">Book Now</button>
+        </div>
+    </div>
+</div>
+
+<!-- Parking Card 5 -->
+<div class="parking-card"
+     data-city="vijayawada"
+     data-location="mg road"
+     data-vehicle="CAR">
+
+    <div class="parking-image image-five">
+        <span class="available-tag">Available</span>
+    </div>
+
+    <div class="parking-details">
+        <h3>City Mall Parking</h3>
+        <p>📍 MG Road, Vijayawada</p>
+        <div class="parking-info">
+            <span>🚗 Car</span>
+            <span>18 Slots Available</span>
+        </div>
+        <div class="price-row">
+            <div>
+                <small>Starting from</small>
+                <h3>₹50 <small>/ hour</small></h3>
+            </div>
+            <button class="book-btn" onclick="bookParking(5)">Book Now</button>
+        </div>
+    </div>
+</div>
+
+<!-- Parking Card 6 -->
+<div class="parking-card"
+     data-city="hyderabad"
+     data-location="ameerpet"
+     data-vehicle="CAR,BIKE">
+
+    <div class="parking-image image-six">
+        <span class="available-tag">Available</span>
+    </div>
+
+    <div class="parking-details">
+        <h3>Metro Smart Parking</h3>
+        <p>📍 Ameerpet, Hyderabad</p>
+        <div class="parking-info">
+            <span>🚗 Car & Bike</span>
+            <span>40 Slots Available</span>
+        </div>
+        <div class="price-row">
+            <div>
+                <small>Starting from</small>
+                <h3>₹40 <small>/ hour</small></h3>
+            </div>
+            <button class="book-btn" onclick="bookParking(6)">Book Now</button>
+        </div>
+    </div>
+</div>
+
+<!-- Parking Card 7 -->
+<div class="parking-card"
+     data-city="hyderabad"
+     data-location="kukatpally"
+     data-vehicle="CAR">
+
+    <div class="parking-image image-seven">
+        <span class="available-tag">Available</span>
+    </div>
+
+    <div class="parking-details">
+        <h3>Tech Park Parking</h3>
+        <p>📍 Kukatpally, Hyderabad</p>
+        <div class="parking-info">
+            <span>🚗 Car</span>
+            <span>25 Slots Available</span>
+        </div>
+        <div class="price-row">
+            <div>
+                <small>Starting from</small>
+                <h3>₹45 <small>/ hour</small></h3>
+            </div>
+            <button class="book-btn" onclick="bookParking(7)">Book Now</button>
+        </div>
+    </div>
+</div>
+
+<!-- Parking Card 8 -->
+<div class="parking-card"
+     data-city="hyderabad"
+     data-location="madhapur"
+     data-vehicle="CAR,BIKE">
+
+    <div class="parking-image image-eight">
+        <span class="available-tag">Available</span>
+    </div>
+
+    <div class="parking-details">
+        <h3>Cyber Towers Parking</h3>
+        <p>📍 Madhapur, Hyderabad</p>
+        <div class="parking-info">
+            <span>🚗 Car & Bike</span>
+            <span>50 Slots Available</span>
+        </div>
+        <div class="price-row">
+            <div>
+                <small>Starting from</small>
+                <h3>₹60 <small>/ hour</small></h3>
+            </div>
+            <button class="book-btn" onclick="bookParking(8)">Book Now</button>
+        </div>
+    </div>
+</div>
+
+                <!-- Sample parking card 3 -->
+                <div class="parking-card"
+                     data-city="vijayawada"
+                     data-location="benz circle"
+                     data-vehicle="CAR,BIKE">
+
+                    <div class="parking-image image-three">
+                        <span class="available-tag">Available</span>
+                    </div>
+
+                    <div class="parking-details">
+                        <h3>Metro Parking Zone</h3>
+                        <p>📍 Benz Circle, Vijayawada</p>
+
+                        <div class="parking-info">
+                            <span>🚗 Car & Bike</span>
+                            <span>35 Slots Available</span>
+                        </div>
+
+                        <div class="price-row">
+                            <div>
+                                <small>Starting from</small>
+                                <h3>₹25 <small>/ hour</small></h3>
+                            </div>
+
+                            <button type="button"
+                                    class="book-btn"
+                                    onclick="bookParking(3)">
+                                Book Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <p id="noResults" class="no-results" hidden>
+                    No parking locations found. Try another search.
+                </p>
+
+            </div>
+
+        </section>
+
+        <footer>
+            © 2026 ParkEase. All Rights Reserved.
+        </footer>
+
+    </main>
+
+    <script src="js/findparking.js"></script>
+</body>
+</html>

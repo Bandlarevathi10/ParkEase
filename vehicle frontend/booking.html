@@ -1,0 +1,216 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Confirmation | ParkEase</title>
+    <link rel="stylesheet" href="css/booking.css">
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="logo">
+            <span class="logo-icon">P</span>
+            <h2>ParkEase</h2>
+        </div>
+
+        <p class="menu-title">CUSTOMER MENU</p>
+
+        <nav>
+            <a href="user-dashboard.html">Dashboard</a>
+            <a href="findparking.html">Find Parking</a>
+            <a href="parkingslots.html">Parking Slots</a>
+            <a href="vehicle.html">My Vehicles</a>
+            <a href="booking.html" class="active">My Bookings</a>
+            <a href="payment.html">Payments</a>
+            <a href="feedback.html">Feedback</a>
+            <a href="complaint.html">Complaints</a>
+            <a href="profile.html">My Profile</a>
+            <a href="my-bookings.html">My Bookings</a>
+            <a href="vehicle.html">My Vehicles</a>
+        </nav>
+
+        <a href="login.html" class="logout">Logout</a>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <h2>Booking Confirmation</h2>
+                <p>Review your parking details before confirming.</p>
+            </div>
+
+            <div class="profile">
+                <div class="profile-circle">R</div>
+                <div>
+                    <strong>Revathi</strong>
+                    <small>Customer</small>
+                </div>
+            </div>
+        </header>
+
+        <section class="page-heading">
+            <h1>Complete Your Booking</h1>
+            <p>Check your selected parking space and enter your vehicle details.</p>
+        </section>
+
+        <div class="booking-container">
+
+            <!-- Left Side -->
+            <section class="booking-form-card">
+
+                <h2>Vehicle Details</h2>
+                <p class="section-description">
+                    Enter the vehicle you want to park.
+                </p>
+
+               <form action="http://localhost:8081/vehicle_backend/Gateway"
+      method="post"
+      id="bookingForm">
+                
+    <<input type="hidden" name="action" value="Booking">
+
+<input type="hidden" name="parkingId" id="formParkingId">
+
+<input type="hidden" name="slotId" id="formSlotId">
+
+<input type="hidden" name="parkingDate" id="formParkingDate">
+
+<input type="hidden" name="startTime" id="formStartTime">
+
+<input type="hidden" name="endTime" id="formEndTime">
+                    <div class="form-group">
+                        <input type="text" id="vehicleNumber"
+                        name="vehicleNumber"
+                         placeholder="Example: AP07AB1234" required>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" id="vehicleModel"
+                                name="vehicleModel"
+                                placeholder="Example: Honda City" required>
+                    </div>
+
+                    <div class="form-group">
+                    <input type="text" id="vehicleType"
+                             name="vehicleType" readonly>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="specialInstructions">Special Instructions (Optional)</label>
+                        <textarea id="specialInstructions"
+                                  rows="3"
+                                  placeholder="Enter any additional information"></textarea>
+                    </div>
+
+                    <div class="terms">
+                        <input type="checkbox" id="terms" required>
+                        <label for="terms">
+                            I agree to the parking terms and conditions.
+                        </label>
+                    </div>
+
+                    <button type="submit" id="confirmBtn">
+                        Confirm Booking
+                    </button>
+
+                    <p id="message"></p>
+
+                </form>
+
+            </section>
+
+            <!-- Right Side -->
+            <section class="summary-card">
+
+                <h2>Booking Summary</h2>
+
+                <div class="parking-preview">
+                    <div class="parking-icon">🅿️</div>
+                    <div>
+                        <h3 id="parkingName">City Center Parking</h3>
+                        <p id="parkingLocation">Brodipet, Guntur</p>
+                    </div>
+                </div>
+
+                <div class="summary-details">
+
+                    <div class="detail-row">
+                        <span>Parking ID</span>
+                        <strong id="parkingId">1</strong>
+                    </div>
+
+                    <div class="detail-row">
+                        <span>Selected Slot</span>
+                        <strong id="slotNumber">C01</strong>
+                    </div>
+
+                    <div class="detail-row">
+                        <span>Vehicle Type</span>
+                        <strong id="summaryVehicle">Car</strong>
+                    </div>
+
+                    <div class="detail-row">
+                        <span>Parking Date</span>
+                        <strong id="parkingDate">-</strong>
+                    </div>
+
+                    <div class="detail-row">
+                        <span>Start Time</span>
+                        <strong id="startTime">-</strong>
+                    </div>
+
+                    <div class="detail-row">
+                        <span>End Time</span>
+                        <strong id="endTime">-</strong>
+                    </div>
+
+                    <div class="detail-row">
+                        <span>Duration</span>
+                        <strong id="duration">-</strong>
+                    </div>
+
+                </div>
+
+                <div class="price-details">
+                    <div class="detail-row">
+                        <span>Price Per Hour</span>
+                        <strong id="pricePerHour">₹30</strong>
+                    </div>
+
+                    <div class="detail-row">
+                        <span>Parking Charges</span>
+                        <strong id="parkingCharges">₹30</strong>
+                    </div>
+
+                    <div class="detail-row total">
+                        <span>Total Amount</span>
+                        <strong id="totalAmount">₹30</strong>
+                    </div>
+                </div>
+
+                <div class="secure-note">
+                    🔒 Your booking details will be securely processed.
+                </div>
+
+                <a href="parkingslots.html" class="back-link">
+                    ← Change Parking Slot
+                </a>
+
+            </section>
+
+        </div>
+
+        <footer>
+            © 2026 ParkEase. All Rights Reserved.
+        </footer>
+
+    </main>
+
+    <script src="js/booking.js"></script>
+</body>
+</html>

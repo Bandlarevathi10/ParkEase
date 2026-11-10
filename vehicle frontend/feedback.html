@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ParkEase | Feedback</title>
+    <link rel="stylesheet" href="css/feedback.css">
+</head>
+<body>
+
+<div class="dashboard">
+
+    <aside class="sidebar">
+        <h2 class="logo">Park<span>Ease</span></h2>
+
+        <p class="menu-title">MAIN MENU</p>
+
+        <a href="user-dashboard.html">Dashboard</a>
+        <a href="findparking.html">Find Parking</a>
+        <a href="parkingslots.html">Parking Slots</a>
+        <a href="payment.html">Payment</a>
+        <a href="feedback.html" class="active">Feedback</a>
+        <a href="complaint.html">Complaints</a>
+        <a href="profile.html">My Profile</a>
+
+        <a href="login.html" class="logout">Logout</a>
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <h2>Feedback</h2>
+                <p>Share your parking experience with us</p>
+            </div>
+            <div class="profile">User</div>
+        </header>
+
+        <section class="feedback-container">
+
+            <div class="feedback-card">
+
+                <div class="feedback-heading">
+                    <div class="heading-icon">★</div>
+                    <h2>We Value Your Feedback</h2>
+                    <p>Your suggestions help us improve ParkEase.</p>
+                </div>
+
+                <form id="feedbackForm">
+
+                    <div class="form-group">
+                        <label for="parkingId">Parking Location</label>
+
+                        <select id="parkingId" required>
+                            <option value="">Select Parking Location</option>
+                            <option value="1">Lulu mall - Hyderabad</option>
+                            <option value="2">Lulu mall - Hyderabad</option>
+                            <option value="3">Nexus mall - Hyderabad</option>
+                            <option value="4">Lakeshore - Hyderabad</option>
+                            <option value="5">Yashodha Hospital - Hyderabad</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Rate Your Experience</label>
+
+                        <div class="rating" id="rating">
+                           
+                            <button type="button" data-value="1">★</button>
+                                 <button type="button" data-value="2">★</button>
+                                <button type="button" data-value="3">★</button>
+                                <button type="button" data-value="4">★</button>
+                                <button type="button" data-value="5">★</button>
+                        </div>
+
+                    <p id="ratingText"></p>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="comments">Your Comments</label>
+
+                        <textarea
+                            id="comments"
+                            rows="5"
+                            maxlength="1000"
+                            placeholder="Write about your experience..."
+                            required></textarea>
+
+                        <small>Maximum 1000 characters.</small>
+                    </div>
+
+                    <button type="submit" class="submit-btn" id="submitBtn">
+                        Submit Feedback
+                    </button>
+
+                    <p id="feedbackMessage" class="message"></p>
+
+                </form>
+            </div>
+
+            <div class="feedback-info">
+                <h3>Why Your Feedback Matters</h3>
+                <p>We use your suggestions to improve parking availability, booking convenience, and customer service.</p>
+
+                <div class="info-item">
+                    <span>01</span>
+                    <div>
+                        <strong>Better Service</strong>
+                        <p>Help us improve the parking experience.</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <span>02</span>
+                    <div>
+                        <strong>Easy Booking</strong>
+                        <p>Tell us how we can make booking easier.</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <span>03</span>
+                    <div>
+                        <strong>Customer Satisfaction</strong>
+                        <p>Your opinions help us serve you better.</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="feedback-success" id="successSection" style="display:none;">
+            <div class="success-icon">✓</div>
+            <h2>Thank You!</h2>
+            <p>Your feedback has been successfully saved.</p>
+            <button type="button" onclick="goToDashboard()">Go to Dashboard</button>
+        </section>
+
+    </main>
+</div>
+
+<script src="js/feedback.js"></script>
+</body>
+</html>

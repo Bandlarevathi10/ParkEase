@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ParkEase | Payment</title>
+    <link rel="stylesheet" href="css/payment.css">
+</head>
+<body>
+
+<div class="dashboard">
+
+    <aside class="sidebar">
+        <h2 class="logo">Park<span>Ease</span></h2>
+
+        <p class="menu-title">MAIN MENU</p>
+
+        <a href="user-dashboard.html">Dashboard</a>
+        <a href="findparking.html">Find Parking</a>
+        <a href="parkingslots.html">Parking Slots</a>
+        <a href="booking.html">Booking</a>
+        <a href="payment.html" class="active">Payment</a>
+        <a href="feedback.html">Feedback</a>
+        <a href="complaint.html">Complaints</a>
+        <a href="profile.html">My Profile</a>
+
+        <a href="login.html" class="logout">Logout</a>
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <h2>Payment</h2>
+                <p>Complete your parking booking</p>
+            </div>
+            <div class="profile">User</div>
+        </header>
+        <form action="http://localhost:8081/vehicle_backend/Gateway"
+      method="post" id="paymentForm">
+
+    <input type="hidden" name="action" value="Payment">
+
+    <input type="hidden" name="bookingId" id="paymentBookingId">
+        <section class="payment-container">
+
+            <div class="payment-left">
+                <h2>Choose Payment Method</h2>
+                <p class="subtitle">Select how you would like to pay.</p>
+
+                <div class="payment-methods">
+
+                    <label class="method active">
+                        <input type="radio" name="paymentMethod" value="UPI" checked>
+                        <span class="method-icon">₹</span>
+                        <span>
+                            <strong>UPI</strong>
+                            <small>Google Pay, PhonePe, Paytm</small>
+                        </span>
+                    </label>
+
+                    <label class="method">
+                        <input type="radio" name="paymentMethod" value="CARD">
+                        <span class="method-icon">💳</span>
+                        <span>
+                            <strong>Credit / Debit Card</strong>
+                            <small>Visa, Mastercard, RuPay</small>
+                        </span>
+                    </label>
+
+                    <label class="method">
+                        <input type="radio" name="paymentMethod" value="NET_BANKING">
+                        <span class="method-icon">🏦</span>
+                        <span>
+                            <strong>Net Banking</strong>
+                            <small>Pay through your bank</small>
+                        </span>
+                    </label>
+
+                    <label class="method">
+                        <input type="radio" name="paymentMethod" value="CASH">
+                        <span class="method-icon">💵</span>
+                        <span>
+                            <strong>Cash</strong>
+                            <small>Pay at the parking location</small>
+                        </span>
+                    </label>
+
+                </div>
+
+                <div class="demo-notice">
+                    <strong>Demo Payment</strong>
+                    <p>This is a frontend demonstration. No real money will be transferred.</p>
+                </div>
+
+                <button type="submit" id="payButton" class="pay-btn">
+                    Confirm Demo Payment
+                </button>
+
+                <p id="paymentMessage" class="message"></p>
+            </div>
+
+            <div class="payment-right">
+                <h2>Booking Summary</h2>
+
+                <div class="summary-row">
+                    <span>Parking Location</span>
+                    <strong id="parkingName">--</strong>
+                </div>
+
+                <div class="summary-row">
+                    <span>Parking Slot</span>
+                    <strong id="slotNumber">--</strong>
+                </div>
+
+                <div class="summary-row">
+                    <span>Vehicle Type</span>
+                    <strong id="vehicleType">--</strong>
+                </div>
+
+                <div class="summary-row">
+                    <span>Vehicle Number</span>
+                    <strong id="vehicleNumber">--</strong>
+                </div>
+
+                <div class="summary-row">
+                    <span>Date</span>
+                    <strong id="parkingDate">--</strong>
+                </div>
+
+                <div class="summary-row">
+                    <span>Start Time</span>
+                    <strong id="startTime">--</strong>
+                </div>
+
+                <div class="summary-row">
+                    <span>End Time</span>
+                    <strong id="endTime">--</strong>
+                </div>
+
+                <div class="summary-row">
+                    <span>Duration</span>
+                    <strong id="duration">--</strong>
+                </div>
+
+                <div class="total-row">
+                    <span>Total Amount</span>
+                    <strong id="totalAmount">₹0.00</strong>
+                </div>
+
+                <p class="secure-text">🔒 Your booking information is displayed for this demo.</p>
+            </div>
+
+        </section>
+    </form>
+        <section id="successSection" class="success-section">
+            <div class="success-icon">✓</div>
+            <h2>Demo Payment Successful!</h2>
+            <p id="successDetails">Your demo payment has been recorded in this browser session.</p>
+            <button onclick="goToDashboard()">Go to Dashboard</button>
+        </section>
+
+    </main>
+</div>
+
+<script src="js/payment.js"></script>
+</body>
+</html>

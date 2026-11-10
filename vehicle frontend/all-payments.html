@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Owner Transactions | ParkEase</title>
+    <link rel="stylesheet" href="css/all-payments.css">
+</head>
+<body>
+
+<div class="sidebar">
+    <h2>Park<span>Ease</span></h2>
+
+    <nav>
+        <a href="owner-dashboard.html">Dashboard</a>
+        <a href="my-parking.html">My Parking</a>
+        <a href="vehicles.html">Vehicles</a>
+        <a href="all-payments.html" class="active">Transactions</a>
+    </nav>
+</div>
+
+<main class="main-content">
+
+    <header class="page-header">
+        <div>
+            <h1>Transactions</h1>
+            <p>View all payments from your parking locations.</p>
+        </div>
+    </header>
+    
+    <section class="summary-cards">
+
+        <div class="summary-card">
+            <p>Total Transactions</p>
+            <h2 id="totalTransactions">0</h2>
+        </div>
+
+        <div class="summary-card">
+            <p>Total Revenue</p>
+            <h2 id="totalRevenue">₹0.00</h2>
+        </div>
+
+        <div class="summary-card">
+            <p>Successful</p>
+            <h2 id="successfulTransactions">0</h2>
+        </div>
+
+        <div class="summary-card">
+            <p>Pending</p>
+            <h2 id="pendingTransactions">0</h2>
+        </div>
+
+        <div class="summary-card">
+            <p>Failed</p>
+            <h2 id="failedTransactions">0</h2>
+        </div>
+
+    </section>
+
+    <section class="transaction-section">
+
+        <div class="section-heading">
+            <h2>All Transactions</h2>
+            <p>Complete payment history for your parking locations</p>
+        </div>
+
+        <div class="filters">
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search customer, vehicle or transaction ID..."
+            >
+
+            <select id="statusFilter">
+                <option value="ALL">All Status</option>
+                <option value="SUCCESS">Success</option>
+                <option value="PENDING">Pending</option>
+                <option value="FAILED">Failed</option>
+            </select>
+        </div>
+
+        <p id="message"></p>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Payment ID</th>
+                        <th>Transaction ID</th>
+                        <th>Booking ID</th>
+                        <th>Customer</th>
+                        <th>Vehicle</th>
+                        <th>Parking</th>
+                        <th>Slot</th>
+                        <th>Amount</th>
+                        <th>Method</th>
+                        <th>Status</th>
+                        <th>Payment Date</th>
+                        <th>Booking Start</th>
+                        <th>Booking End</th>
+                    </tr>
+                </thead>
+
+                <tbody id="transactionTable">
+                    <tr>
+                        <td colspan="13">Loading transactions...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </section>
+
+</main>
+
+<script src="js/all-payments.js"></script>
+</body>
+</html>

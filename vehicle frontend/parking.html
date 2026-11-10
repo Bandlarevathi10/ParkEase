@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parking Details | ParkEase</title>
+    <link rel="stylesheet" href="css/parking.css">
+</head>
+<body>
+
+<header class="navbar">
+    <a href="index.html" class="logo">Park<span>Ease</span></a>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="search-parking.html">Find Parking</a>
+        <a href="my-booking.html">My Bookings</a>
+        <a href="login.html">Login</a>
+    </nav>
+</header>
+
+<main class="container">
+
+    <div class="heading">
+        <p class="tagline">PARKING INFORMATION</p>
+        <h1>Parking Details</h1>
+        <p>Check the parking location, facilities and available slots.</p>
+    </div>
+
+    <section class="details-layout">
+
+        <div class="parking-visual">
+            <div class="parking-symbol">P</div>
+            <h2>City Center Parking</h2>
+            <span class="available">● Available</span>
+        </div>
+
+        <div class="details-card">
+
+            <h2>Location Information</h2>
+
+            <div class="detail-row">
+                <span>Parking Name</span>
+                <strong>City Center Parking</strong>
+            </div>
+
+            <div class="detail-row">
+                <span>Address</span>
+                <strong>Guntur Main Road</strong>
+            </div>
+
+            <div class="detail-row">
+                <span>Available Slots</span>
+                <strong>12 Slots</strong>
+            </div>
+
+            <div class="detail-row">
+                <span>Vehicle Type</span>
+                <strong>Car / Bike</strong>
+            </div>
+
+            <div class="detail-row">
+                <span>Price</span>
+                <strong class="price">₹40 / hour</strong>
+            </div>
+
+            <div class="detail-row">
+                <span>Facilities</span>
+                <strong>CCTV, Security</strong>
+            </div>
+
+            <button id="bookNow" class="book-btn">
+                Book This Parking
+            </button>
+
+        </div>
+        <form action="http://localhost:8081/vehicle_backend/Gateway" method="post">
+
+    <input type="hidden" name="action" value="Parking">
+    <input type="hidden" name="parkingAction" value="add">
+
+    <label>Parking Name</label>
+    <input type="text" name="parkingName" required>
+
+    <label>Location</label>
+    <input type="text" name="location" required>
+
+    <label>City</label>
+    <input type="text" name="city" required>
+
+    <label>Address</label>
+    <input type="text" name="address">
+
+    <label>Total Slots</label>
+    <input type="number" name="totalSlots" required>
+
+    <label>Price Per Hour</label>
+    <input type="number" name="pricePerHour" step="0.01" required>
+
+    <label>Description</label>
+    <textarea name="description"></textarea>
+
+    <button type="submit">Add Parking</button>
+
+</form>
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 ParkEase. All Rights Reserved.</p>
+</footer>
+
+<script src="js/parking.js"></script>
+</body>
+</html>

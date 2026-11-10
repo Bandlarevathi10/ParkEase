@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | ParkEase</title>
+    <link rel="stylesheet" href="css/register.css">
+</head>
+<body style="background-color:#F1F5FB;">
+
+    <div class="register-container">
+
+        <div class="register-info"
+             style="background:linear-gradient(135deg,#101D35,#174B83); color:white;">
+
+            <a href="index.html" class="logo" style="color:white;">
+                Park<span style="color:#42A5FF;">Ease</span>
+            </a>
+
+            <div class="info-content">
+
+                <p class="tagline" style="color:#72B7FF;">
+                    WELCOME TO PARKEASE
+                </p>
+
+                <h1 style="color:white;">
+                    Your Parking Journey Starts Here.
+                </h1>
+
+                <p style="color:#E0EAF7;">
+                    Create your account to search parking spaces,
+                    book slots and manage your vehicles easily.
+                </p>
+
+                <img
+                    src="https://images.unsplash.com/photo-1590674899484-d5640e854abe?w=900"
+                    alt="Car parking facility"
+                    style="width:100%; max-width:420px; border-radius:14px; margin-top:20px;">
+
+            </div>
+
+            <a href="index.html" class="back-link" style="color:white;">
+                ← Back to Home
+            </a>
+        </div>
+
+        <div class="register-form-section" style="background-color:#FFFFFF;">
+
+            <div class="form-box">
+
+                <h2 style="color:#142B50;">Create Account</h2>
+
+                <p class="subtitle" style="color:#64748B;">
+                    Enter your details to get started.
+                </p>
+
+              
+                    <form action="http://localhost:8081/vehicle_backend/Gateway" method="post" onsubmit="return validateRegister()">
+
+                    <input type="hidden" name="action" value="Register">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="fullname"
+                            placeholder="Enter your full name">
+
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email"
+                                 placeholder="Enter your email">
+
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone"
+                         placeholder="Enter 10-digit phone number"
+                         maxlength="10">
+
+                    <label for="role">Register As</label>
+                    <select id="role" name="role">
+                        <option value="">Select your role</option>
+                        <option value="USER">User</option>
+                        <option value="OWNER">Parking Owner</option>
+                    </select>
+
+                    <label for="password">Password</label>
+                    <div class="password-box">
+                     <input type="password" id="password" name="password"
+                        placeholder="Create password">
+                     <button type="button" id="togglePassword">Show</button>
+                    </div>
+
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword"
+                          name="confirmPassword"
+                          placeholder="Confirm your password">
+                    
+                    <button type="submit" class="register-btn"
+                            style="background-color:#1677D2; color:white;">
+                        Create Account
+                    </button>
+
+                    <p id="message" class="message"></p>
+
+                </form>
+
+                <p class="login-text">
+                    Already have an account?
+                    <a href="login.html" style="color:#1677D2;">Login</a>
+                </p>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script src="js/register.js"></script>
+</body>
+</html>

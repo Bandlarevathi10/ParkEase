@@ -1,0 +1,206 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Slots | ParkEase</title>
+    <link rel="stylesheet" href="css/manage-slots.css">
+</head>
+<body>
+
+<div class="sidebar">
+    <h2>Park<span>Ease</span></h2>
+    <span><i class="maintenance-box"></i> Maintenance</span>
+    <nav>
+        <a href="owner-dashboard.html">Dashboard</a>
+        <a href="my-parking.html">My Parking</a>
+        <a href="manage-slots.html" class="active">Manage Slots</a>
+        <a href="owner-payments.html">Payments</a>
+        <a href="owner-feedback.html">Feedback</a>
+        <a href="owner-complaints.html">Complaints</a>
+        <a href="owner-profile.html">My Profile</a>
+        <a href="login.html">Logout</a>
+    </nav>
+</div>
+
+<div class="main">
+
+    <header class="topbar">
+        <div>
+            <h2>Manage Parking Slots</h2>
+            <p>Add and manage your parking spaces</p>
+        </div>
+
+        <div class="owner-info">
+            <div class="avatar">O</div>
+            <span>Parking Owner</span>
+        </div>
+    </header>
+
+    <section class="welcome">
+        <div>
+            <h2>Parking Slot Management</h2>
+            <p>Monitor your CAR and BIKE parking availability.</p>
+        </div>
+
+        <button class="add-btn" id="openAddForm">+ Add New Slot</button>
+    </section>
+
+    <!-- Statistics -->
+    <section class="stats">
+
+        <div class="stat-card">
+            <h3>Total Slots</h3>
+            <h2 id="totalSlots">0</h2>
+        </div>
+
+        <div class="stat-card">
+            <h3>Available Slots</h3>
+            <h2 class="green" id="availableSlots">0</h2>
+        </div>
+
+        <div class="stat-card">
+            <h3>Booked Slots</h3>
+            <h2 class="red" id="bookedSlots">0</h2>
+        </div>
+
+    </section>
+
+    <!-- Parking selection -->
+    <section class="filter-section">
+
+        <div class="form-group">
+            <label>Select Parking Location</label>
+            <select id="parkingSelect">
+                <option value="">Select Parking</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Vehicle Type</label>
+            <select id="vehicleFilter">
+                <option value="ALL">All Vehicles</option>
+                <option value="CAR">Car</option>
+                <option value="BIKE">Bike</option>
+            </select>
+        </div>
+
+    </section>
+
+    <!-- Add Slot Form -->
+    <section class="form-container" id="slotFormSection">
+
+        <h3 id="formTitle">Add New Parking Slot</h3>
+        <div class="form-group">
+    <label>Number of Car Slots</label>
+    <input type="number" id="carSlots" name="carSlots"
+           min="0" value="0" required>
+</div>
+
+<div class="form-group">
+    <label>Number of Bike Slots</label>
+    <input type="number" id="bikeSlots" name="bikeSlots"
+           min="0" value="0" required>
+</div>
+        <form id="slotForm">
+
+            <input type="hidden" id="slotId">
+
+            <div class="form-grid">
+
+                <div class="form-group">
+                    <label>Parking Location</label>
+                    <select id="formParking" required>
+                        <option value="">Select Parking</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Slot Number</label>
+                    <input type="text" id="slotNumber"
+                           placeholder="Example: C01 or B01" required>
+                </div>
+ 
+                <div class="form-group">
+                    <label>Vehicle Type</label>
+                    <select id="vehicleType" required>
+                        <option value="">Select Vehicle</option>
+                        <option value="CAR">CAR</option>
+                        <option value="BIKE">BIKE</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Slot Status</label>
+                    <select id="slotStatus" required>
+                        <option value="AVAILABLE">Available</option>
+                        <option value="BOOKED">Booked</option>
+                        <option value="MAINTENANCE">Maintenance</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <div class="form-buttons">
+                <button type="submit" class="save-btn" id="saveBtn">
+                    Save Slot
+                </button>
+
+                <button type="button" class="cancel-btn" id="cancelBtn">
+                    Cancel
+                </button>
+            </div>
+
+            <p id="message"></p>
+
+        </form>
+
+    </section>
+
+    <!-- Slot legend -->
+    <section class="slot-section">
+
+        <div class="section-heading">
+            <h3>Parking Slot Layout</h3>
+
+            <div class="legend">
+                <span><i class="available-box"></i> Available</span>
+                <span><i class="booked-box"></i> Booked</span>
+                <span><i class="selected-box"></i> Selected</span>
+            </div>
+        </div>
+
+        <div class="slot-grid" id="slotGrid"></div>
+
+    </section>
+
+    <!-- Slot details table -->
+    <section class="table-section">
+
+        <h3>Slot Details</h3>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Slot ID</th>
+                        <th>Parking Name</th>
+                        <th>Slot Number</th>
+                        <th>Vehicle Type</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+
+                <tbody id="slotTableBody"></tbody>
+            </table>
+        </div>
+
+    </section>
+
+</div>
+
+<script src="js/manage-slots.js"></script>
+</body>
+</html>

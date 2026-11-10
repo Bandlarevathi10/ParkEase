@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ParkEase | My Vehicles</title>
+    <link rel="stylesheet" href="css/vehicle.css">
+</head>
+<body>
+
+<div class="dashboard">
+
+    <aside class="sidebar">
+        <h2 class="logo">Park<span>Ease</span></h2>
+        <p class="menu-title">MAIN MENU</p>
+
+        <a href="user-dashboard.html">Dashboard</a>
+        <a href="findparking.html">Find Parking</a>
+        <a href="parkingslots.html">Parking Slots</a>
+        <a href="booking.html">New Booking</a>
+        <a href="my-bookings.html">My Bookings</a>
+        <a href="vehicle.html" class="active">My Vehicles</a>
+        <a href="payment.html">Payment</a>
+        <a href="feedback.html">Feedback</a>
+        <a href="complaint.html">Complaints</a>
+
+        <a href="login.html" class="logout">Logout</a>
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <h2>My Vehicles</h2>
+                <p>Manage your registered cars and bikes</p>
+            </div>
+            <div class="profile">User</div>
+        </header>
+
+        <section class="vehicle-layout">
+
+            <div class="vehicle-form-card">
+
+                <h2>Register New Vehicle</h2>
+                <p class="subtitle">Add your vehicle details below.</p>
+
+                <form id="vehicleForm">
+
+                    <div class="form-group">
+                        <label for="vehicleNumber">Vehicle Number</label>
+                        <input
+                            type="text"
+                            id="vehicleNumber"
+                            placeholder="Example: AP07AB1234"
+                            maxlength="15"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="vehicleType">Vehicle Type</label>
+                        <select id="vehicleType" required>
+                            <option value="">Select Vehicle Type</option>
+                            <option value="CAR">Car</option>
+                            <option value="BIKE">Bike</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="vehicleModel">Vehicle Model</label>
+                        <input
+                            type="text"
+                            id="vehicleModel"
+                            placeholder="Example: Hyundai i20"
+                            maxlength="100"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="vehicleColor">Vehicle Color</label>
+                        <input
+                            type="text"
+                            id="vehicleColor"
+                            placeholder="Example: White"
+                            maxlength="50"
+                            required>
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        + Add Vehicle
+                    </button>
+
+                    <p id="vehicleMessage" class="message"></p>
+
+                </form>
+            </div>
+
+            <div class="vehicle-info-card">
+                <div class="info-icon">🚘</div>
+                <h2>Why Register Your Vehicle?</h2>
+                <p>
+                    Registering your vehicle makes parking booking
+                    easier and helps you manage your vehicles in one place.
+                </p>
+
+                <div class="info-point">
+                    <span>✓</span>
+                    Easy parking booking
+                </div>
+
+                <div class="info-point">
+                    <span>✓</span>
+                    Manage multiple vehicles
+                </div>
+
+                <div class="info-point">
+                    <span>✓</span>
+                    Quick vehicle identification
+                </div>
+            </div>
+
+        </section>
+
+        <section class="vehicle-list-section">
+
+            <div class="section-heading">
+                <div>
+                    <h2>Registered Vehicles</h2>
+                    <p>All your saved vehicles</p>
+                </div>
+
+                <span id="vehicleCount">0 Vehicles</span>
+            </div>
+
+            <div class="vehicle-list" id="vehicleList">
+
+                <div class="empty-state">
+                    No vehicles registered yet.
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+</div>
+
+<script src="js/vehicle.js"></script>
+</body>
+</html>

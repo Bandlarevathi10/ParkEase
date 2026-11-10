@@ -1,0 +1,189 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | ParkEase</title>
+    <link rel="stylesheet" href="css/user-dashboard.css">
+</head>
+<body>
+
+<div class="dashboard-container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <a href="index.html" class="logo">
+            Park<span>Ease</span>
+        </a>
+
+        <p class="menu-title">MAIN MENU</p>
+
+        <nav>
+            <a href="dashboard.html" class="active">Dashboard</a>
+            <a href="http://localhost:8081/vehicle_backend/SearchParkingControllerr">Find Parking</a>
+            <a href="parkingslots.html">Parking Slots</a>
+            <a href="vehicle.html">My Vehicles</a>
+            <a href="booking.html">My Bookings</a>
+            <a href="payment.html">Payments</a>
+            <a href="feedback.html">Feedback</a>
+            <a href="complaint.html">Complaints</a>
+            <a href="profile.html">My Profile</a>
+            <a href="my-bookings.html">My Bookings</a>
+            <a href="vehicle.html">My Vehicles</a>              
+        </nav>
+
+        <a href="login.html" class="logout">Logout</a>
+
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <!-- Topbar -->
+        <header class="topbar">
+
+            <div>
+                <h2>Dashboard</h2>
+                <p>Welcome back to ParkEase!</p>
+            </div>
+
+              <div class="user-profile">
+        <div class="user-avatar" id="userAvatar">U</div>
+        <h2>Welcome, <span id="loggedUserName">User</span>!</h2>
+    </div>
+
+        </header>
+
+        <!-- Welcome Section -->
+        <section class="welcome-section">
+
+            <div>
+                <h1>Find Your Perfect Parking Space!</h1>
+                <p>
+                    Book your parking slot easily and save your valuable time.
+                </p>
+
+                <a href="findparking.html" class="primary-btn">
+                    Find Parking Now
+                </a>
+            </div>
+
+            <img
+                src="https://images.unsplash.com/photo-1506521781263-d8422e82f27a?w=900"
+                alt="Parking facility">
+
+        </section>
+
+        <!-- Statistics -->
+        <section class="stats-section">
+
+            <div class="stat-card">
+                <div class="stat-icon blue">B</div>
+                <div>
+                    <p>Total Bookings</p>
+                    <h2 id="totalBookings">12</h2>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon green">A</div>
+                <div>
+                    <p>Available Slots</p>
+                    <h2 id="availableSlots">45</h2>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon orange">C</div>
+                <div>
+                    <p>Active Bookings</p>
+                    <h2 id="activeBookings">2</h2>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon purple">V</div>
+                <div>
+                    <p>My Vehicles</p>
+                    <h2 id="totalVehicles">2</h2>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Quick Actions -->
+        <section class="quick-section">
+
+            <h2>Quick Actions</h2>
+
+            <div class="quick-cards">
+
+                <a href="findparking.html" class="quick-card">
+                    <h3>Find Parking</h3>
+                    <p>Search for nearby parking locations.</p>
+                    <span>Explore →</span>
+                </a>
+
+                <a href="vehicle.html" class="quick-card">
+                    <h3>Add Vehicle</h3>
+                    <p>Register and manage your vehicles.</p>
+                    <span>Manage →</span>
+                </a>
+
+                <a href="booking.html" class="quick-card">
+                    <h3>My Bookings</h3>
+                    <p>View your parking booking details.</p>
+                    <span>View →</span>
+                </a>
+
+            </div>
+
+        </section>
+
+        <!-- Recent Bookings -->
+        <section class="recent-section">
+
+            <div class="section-heading">
+                <h2>Recent Bookings</h2>
+                <a href="booking.html">View All</a>
+            </div>
+
+            <div class="table-container">
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Booking ID</th>
+                            <th>Location</th>
+                            <th>Vehicle</th>
+                            <th>Date</th>
+                            <th>Amount</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="bookingTable">
+                    <tr>
+                        <td colspan="6">Loading bookings...</td>
+                    </tr>
+                    </tbody>
+                </table>
+
+            </div>
+
+        </section>
+
+        <footer>
+            © 2026 ParkEase. All Rights Reserved.
+        </footer>
+
+    </main>
+
+</div>
+
+<script src="js/user-dashboard.js"></script>
+
+</body>
+</html>

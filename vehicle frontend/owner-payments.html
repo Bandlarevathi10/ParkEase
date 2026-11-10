@@ -1,0 +1,197 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Owner Payments | ParkEase</title>
+    <link rel="stylesheet" href="css/owner-payments.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<div class="dashboard">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="logo">
+            <i class="fa-solid fa-square-parking"></i>
+            <span>ParkEase</span>
+        </div>
+
+        <p class="menu-title">OWNER MENU</p>
+
+        <a href="owner-dashboard.html"> Dashboard
+        </a>
+
+        <a href="my-parking.html"> My Parking
+        </a>
+
+        <a href="manage-slots.html"> Manage Slots
+        </a>
+
+       
+
+        <a href="owner-payments.html" class="active">
+            Payments
+        </a>
+
+        <a href="owner-feedback.html">
+            Feedback
+        </a>
+
+        <a href="owner-complaints.html">
+             Complaints
+        </a>
+
+        <a href="owner-profile.html">
+             Profile
+        </a>
+
+        <a href="#" id="logoutBtn" class="logout">
+             Logout
+        </a>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <h2>Payments</h2>
+                <p>Track your parking revenue and transactions</p>
+            </div>
+
+            <div class="owner-info">
+                <div class="owner-avatar">O</div>
+                <div>
+                    <h4>Parking Owner</h4>
+                    <span>Owner Account</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Summary Cards -->
+        <section class="stats">
+
+            <div class="stat-card">
+                <div class="stat-icon blue">
+                    <i class="fa-solid fa-indian-rupee-sign"></i>
+                </div>
+                <div>
+                    <p>Total Revenue</p>
+                    <h2 id="totalRevenue">₹0</h2>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon green">
+                    <i class="fa-solid fa-circle-check"></i>
+                </div>
+                <div>
+                    <p>Successful Payments</p>
+                    <h2 id="successPayments">0</h2>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon orange">
+                    <i class="fa-solid fa-clock"></i>
+                </div>
+                <div>
+                    <p>Pending Payments</p>
+                    <h2 id="pendingPayments">0</h2>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon red">
+                    <i class="fa-solid fa-circle-xmark"></i>
+                </div>
+                <div>
+                    <p>Failed Payments</p>
+                    <h2 id="failedPayments">0</h2>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Payment History -->
+        <section class="payment-section">
+
+            <div class="section-header">
+                <div>
+                    <h3>Payment History</h3>
+                    <p>View and manage customer transactions</p>
+                </div>
+
+                <button class="export-btn" id="exportBtn">
+                    <i class="fa-solid fa-download"></i> Export CSV
+                </button>
+            </div>
+
+            <!-- Filters -->
+            <div class="filters">
+
+                <div class="search-box">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" id="searchInput"
+                           placeholder="Search booking ID or transaction ID">
+                </div>
+
+                <select id="statusFilter">
+                    <option value="ALL">All Payments</option>
+                    <option value="SUCCESS">Success</option>
+                    <option value="PENDING">Pending</option>
+                    <option value="FAILED">Failed</option>
+                </select>
+
+                <select id="methodFilter">
+                    <option value="ALL">All Methods</option>
+                    <option value="UPI">UPI</option>
+                    <option value="CARD">Card</option>
+                    <option value="NET BANKING">Net Banking</option>
+                    <option value="CASH">Cash</option>
+                </select>
+
+            </div>
+
+            <!-- Table -->
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Payment ID</th>
+                            <th>Booking ID</th>
+                            <th>Customer</th>
+                            <th>Parking Location</th>
+                            <th>Amount</th>
+                            <th>Payment Method</th>
+                            <th>Transaction ID</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="paymentTableBody">
+                        <!-- JavaScript data -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="no-data" id="noData" style="display:none;">
+                <i class="fa-solid fa-wallet"></i>
+                <h3>No Payments Found</h3>
+                <p>There are no transactions matching your search.</p>
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="js/owner-payments.js"></script>
+</body>
+</html>

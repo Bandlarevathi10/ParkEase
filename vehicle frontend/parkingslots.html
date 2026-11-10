@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parking Slots | ParkEase</title>
+    <link rel="stylesheet" href="css/parkingslots.css">
+</head>
+<body>
+
+    <aside class="sidebar">
+        <div class="logo">
+            <span class="logo-icon">P</span>
+            <h2>ParkEase</h2>
+        </div>
+
+        <p class="menu-title">CUSTOMER MENU</p>
+
+        <nav>
+            <a href="user-dashboard.html">Dashboard</a>
+            <a href="findparking.html">Find Parking</a>
+            <a href="parkingslots.html" class="active">Parking Slots</a>
+            <a href="vehicle.html">My Vehicles</a>
+            <a href="booking.html">My Bookings</a>
+            <a href="payment.html">Payments</a>
+            <a href="feedback.html">Feedback</a>
+            <a href="complaint.html">Complaints</a>
+            <a href="profile.html">My Profile</a>
+        </nav>
+
+        <a href="login.html" class="logout">Logout</a>
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <h2>Parking Slots</h2>
+                <p>Select your preferred parking slot</p>
+            </div>
+
+            <div class="profile">
+                <div class="profile-circle">R</div>
+                <div>
+                    <strong>Revathi</strong>
+                    <small>Customer</small>
+                </div>
+            </div>
+        </header>
+
+        <section class="parking-heading">
+            <div>
+                <h1 id="parkingName">City Center Parking</h1>
+                <p id="parkingLocation">Brodipet, Guntur</p>
+            </div>
+            <a href="findparking.html" class="back-btn">← Back to Search</a>
+        </section>
+
+        <section class="filter-card">
+            <div class="filter-group">
+                <label for="vehicleType">Select Vehicle Type</label>
+                <select id="vehicleType">
+                <option value="">Select Vehicle</option>
+                <option value="CAR">Car</option>
+                <option value="BIKE">Bike</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="slotDate">Parking Date</label>
+                <input type="date" id="slotDate">
+            </div>
+
+            <div class="filter-group">
+                <label for="startTime">Start Time</label>
+                <input type="time" id="startTime">
+            </div>
+
+            <div class="filter-group">
+                <label for="endTime">End Time</label>
+                <input type="time" id="endTime">
+            </div>
+        </section>
+
+        <div class="slot-section">
+
+    <div class="section-heading">
+        <h2>Choose Your Slot</h2>
+        <p>Click on a green slot to select it.</p>
+    </div>
+
+    <!-- Slot Legend -->
+    <div class="legend">
+        <span><i class="available"></i> Available</span>
+        <span><i class="booked"></i> Booked</span>
+        <span><i class="selected"></i> Selected</span>
+    </div>
+
+    <!-- Parking Layout -->
+    <div class="parking-layout">
+
+        <div class="entrance">
+            🚗 PARKING ENTRANCE
+        </div>
+
+        <!-- Slots appear here -->
+        <div id="slotGrid" class="slot-grid">
+            <button class="slot available"
+            data-slot-id="6"
+            data-slot-number="A1">
+        🚗
+        <span>A1</span>
+        <small>Available</small>
+    </button>
+
+    <button class="slot booked"
+            data-slot-id="7"
+            data-slot-number="A2"
+            disabled>
+        🚗
+        <span>A2</span>
+        <small>Booked</small>
+    </button>
+    <button class="slot booked"
+            data-slot-id="10"
+            data-slot-number="A5"
+            disabled>
+        🚗
+        <span>A5</span>
+        <small>Booked</small>
+    </button>
+
+    <button class="slot available"
+            data-slot-id="8"
+            data-slot-number="A3">
+        🚗
+        <span>A3</span>
+        <small>Available</small>
+    </button>
+
+    <button class="slot available"
+            data-slot-id="9"
+            data-slot-number="A4">
+        🚗
+        <span>A4</span>
+        <small>Available</small>
+    </button>
+
+        </div>
+
+        <div class="exit">
+            🚗 PARKING EXIT
+        </div>
+
+    </div>
+
+    <!-- Selected Slot -->
+    <div class="selection-card">
+        <div>
+            <small>Selected Parking Slot</small>
+            <h2 id="selectedSlot">Not selected</h2>
+            <p id="selectionMessage">Please select an available slot.</p>
+        </div>
+
+        <button id="continueBtn" disabled>
+            Continue to Booking
+        </button>
+    </div>
+
+    </div>
+        <footer>
+            © 2026 ParkEase. All Rights Reserved.
+        </footer>
+
+    </main>
+
+    <script src="js/parkingslots.js"></script>
+</body>
+</html>

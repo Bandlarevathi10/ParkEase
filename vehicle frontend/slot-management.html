@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slot Management | ParkEase</title>
+    <link rel="stylesheet" href="CSS/parking.css">
+</head>
+<body>
+<nav class="navbar">
+    <a class="logo" href="index.html">ParkEase</a>
+    <div class="nav-links">
+        <a href="owner-dashboard.html">Dashboard</a>
+        <a href="add-parking.html">Add Parking</a>
+        <a href="parking-list.html">My Parking Areas</a>
+        <a href="login.html">Logout</a>
+    </div>
+</nav>
+
+<main class="container">
+    <div class="page-header">
+        <h1>Parking Slot Management</h1>
+        <p>Create parking slots and update their availability.</p>
+    </div>
+    <form action="http://localhost:8081/vehicle_backend/Gateway" method="post">
+    <input type="hidden" name="action" value="Slots">
+    <input type="hidden" name="slotAction" value="add">
+        <div class="form-group">
+            <label>Parking ID</label>
+            <input type="number" name="parkingId" required>
+        </div>
+        <div class="form-group">
+            <label>Slot Number</label>
+            <input type="text" name="slotNumber" placeholder="A-01" required>
+        </div>
+        <div class="form-group">
+            <label>Vehicle Type</label>
+            <select name="vehicleType" required>
+                <option value="">Select vehicle</option>
+                <option value="CAR">Car</option>
+                <option value="BIKE">Bike</option>
+                <option value="BOTH">Both</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Slot Status</label>
+            <select name="status" required>
+                <option value="AVAILABLE">Available</option>
+                <option value="OCCUPIED">Occupied</option>
+                <option value="MAINTENANCE">Maintenance</option>
+            </select>
+        </div>
+        <button class="btn" type="submit">Save Slot</button>
+    </form>
+
+    <h2 class="section-title">Slot Overview</h2>
+    <div class="cards">
+        <div class="card"><h3>Available Slots</h3><p class="number">25</p></div>
+        <div class="card"><h3>Occupied Slots</h3><p class="number">12</p></div>
+        <div class="card"><h3>Maintenance</h3><p class="number">3</p></div>
+    </div>
+</main>
+<footer class="footer">© 2026 ParkEase</footer>
+<script src="JS/parking.js"></script>
+</body>
+</html>

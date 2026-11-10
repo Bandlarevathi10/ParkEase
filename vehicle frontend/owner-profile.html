@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ParkEase | Owner Profile</title>
+    <link rel="stylesheet" href="css/owner-profile.css">
+</head>
+<body>
+
+<div class="dashboard">
+
+    <aside class="sidebar">
+        <h2 class="logo">Park<span>Ease</span></h2>
+
+        <p class="menu-title">OWNER CONTROL PANEL</p>
+
+        <a href="owner-dashboard.html">Dashboard</a>
+        <a href="my-parking.html">My Parking</a>
+        <a href="manage-slots.html">Manage Slots</a>
+        <a href="owner-bookings.html">Bookings</a>
+        <a href="owner-vehicles.html">Vehicles</a>
+        <a href="owner-payments.html">Payments</a>
+        <a href="owner-feedback.html">Feedback</a>
+        <a href="owner-complaints.html">Complaints</a>
+        <a href="owner-profile.html" class="active">My Profile</a>
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <h2>My Profile</h2>
+                <p>View your personal and business details</p>
+            </div>
+
+            <div class="profile-avatar" id="ownerInitial">O</div>
+        </header>
+
+        <section class="profile-card">
+
+            <div class="profile-heading">
+                <div class="large-avatar" id="largeInitial">O</div>
+
+                <div>
+                    <h2 id="ownerName">Loading...</h2>
+                    <p id="ownerEmail">Loading...</p>
+                    <span class="role-badge" id="ownerRole">OWNER</span>
+                </div>
+            </div>
+
+            <div class="details-section">
+                <h3>Personal Information</h3>
+
+                <div class="details-grid">
+                    <div class="detail">
+                        <label>Full Name</label>
+                        <p id="name">-</p>
+                    </div>
+
+                    <div class="detail">
+                        <label>Email Address</label>
+                        <p id="email">-</p>
+                    </div>
+
+                    <div class="detail">
+                        <label>Phone Number</label>
+                        <p id="phone">-</p>
+                    </div>
+
+                    <div class="detail">
+                        <label>Account Role</label>
+                        <p id="role">-</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="details-section">
+                <h3>Business Information</h3>
+
+                <div class="details-grid">
+                    <div class="detail">
+                        <label>Business Name</label>
+                        <p id="businessName">-</p>
+                    </div>
+
+                    <div class="detail">
+                        <label>Business Address</label>
+                        <p id="businessAddress">-</p>
+                    </div>
+
+                    <div class="detail">
+                        <label>Contact Person</label>
+                        <p id="contactPerson">-</p>
+                    </div>
+
+                    <div class="detail">
+                        <label>Business Contact Number</label>
+                        <p id="contactPhone">-</p>
+                    </div>
+                </div>
+            </div>
+
+            <p id="profileMessage"></p>
+
+        </section>
+    </main>
+</div>
+
+<script src="js/owner-profile.js"></script>
+</body>
+</html>
